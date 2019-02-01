@@ -41,7 +41,8 @@
     "react-dom": "^0.14.7",
     "require-dir": "^0.3.0",
     "style-loader": "^0.13.0",
-    "webpack": "^1.12.14"
+    "webpack": "^1.12.14",
+    "yazl": "^2.5.1"
   },
   "devDependencies": {
     "archiver": "^2.1.1"

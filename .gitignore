@@ -1,6 +1,7 @@
 /node_modules
 /build
 /package
+/dist
 
 # OS generated files
 .DS_Store

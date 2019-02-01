@@ -1,4 +1,4 @@
-/* global chrome */
+/* global browser */
 import DevToolsPanel from './components/DevToolsPanel';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 let alreadyShown = false;
 
 function createPanel() {
-  chrome.devtools.panels.create('GraphQL',
+  browser.devtools.panels.create('GraphQL',
     './icons/icon48.png',
     './panel.html',
     (panel) => {
@@ -14,8 +14,8 @@ function createPanel() {
         if (!alreadyShown) {
           ReactDOM.render(
             <DevToolsPanel
-              requestFinished={chrome.devtools.network.onRequestFinished}
-              getHAR={chrome.devtools.network.getHAR}
+              requestFinished={browser.devtools.network.onRequestFinished}
+              getHAR={browser.devtools.network.getHAR}
             />,
             panelWindow.document.getElementById('results'),
           );
